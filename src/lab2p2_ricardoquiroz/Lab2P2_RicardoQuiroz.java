@@ -40,6 +40,7 @@ static Scanner lea = new Scanner(System.in);
                     int submenu1 = 0;
                     boolean cent1;
                     while (submenu1 != 6) {
+                        cent1 = false;
                         System.out.println("----------Clientes----------");
                         System.out.println("1. Crear");
                         System.out.println("2. Modificar");
@@ -52,18 +53,26 @@ static Scanner lea = new Scanner(System.in);
                         System.out.println("----------------------------");
                         if (submenu1 == 1) {
                             
+                            cent1 = true;
                         }
                         if (submenu1 == 2) {
                             
+                            cent1 = true;
                         }
                         if (submenu1 == 3) {
                             
+                            cent1 = true;
                         }
                         if (submenu1 == 4) {
                             
+                            cent1 = true;
                         }
                         if (submenu1 == 5) {
                             
+                            cent1 = true;
+                        }
+                        if (!cent1 && submenu1 != 6) {
+                            System.out.println("Ingrese opcion correcta del submenu");
                         }
                     }                    
                     cent = true;
@@ -71,33 +80,81 @@ static Scanner lea = new Scanner(System.in);
                 if (menu == 2) {
                     int submenu2 = 0;
                     boolean cent2;
-                    System.out.println("----------Empleados----------");
-                    System.out.println("1. Crear");
-                    System.out.println("2. Modificar");
-                    System.out.println("3. Eliminar");
-                    System.out.println("4. Listar");
-                    System.out.println("5. Marcar asistencia");
-                    System.out.println("6. Salir");
-                    System.out.println("Ingrese opcion del submenu: ");
-                    System.out.println("-----------------------------");
-                    
+                    while (submenu2 != 6) {
+                        cent2 = false;
+                        System.out.println("----------Empleados----------");
+                        System.out.println("1. Crear");
+                        System.out.println("2. Modificar");
+                        System.out.println("3. Eliminar");
+                        System.out.println("4. Listar");
+                        System.out.println("5. Marcar asistencia");
+                        System.out.println("6. Salir");
+                        System.out.println("Ingrese opcion del submenu: ");
+                        submenu2 = lea.nextInt();
+                        System.out.println("-----------------------------");
+                        if (submenu2 == 1) {
+                            
+                            cent2 = true;
+                        }
+                        if (submenu2 == 2) {
+                            
+                            cent2 = true;
+                        }
+                        if (submenu2 == 3) {
+                            
+                            cent2 = true;
+                        }
+                        if (submenu2 == 4) {
+                            
+                            cent2 = true;
+                        }
+                        if (submenu2 == 5) {
+                            
+                            cent2 = true;
+                        }
+                        if (!cent2 && submenu2 != 6) {
+                            System.out.println("Ingrese opcion correcta del submenu");
+                        }
+                    }                    
                     cent = true;
                 }
                 if (menu == 3) {
                     int submenu3 = 0;
                     boolean cent3;
-                    System.out.println("---------Carros----------");
-                    System.out.println("1. Crear");
-                    System.out.println("2. Modificar");
-                    System.out.println("3. Eliminar");
-                    System.out.println("4. Listar por su estado");
-                    System.out.println("5. Salir");
-                    System.out.println("Ingrese opcion del submenu: ");
-                    System.out.println("-------------------------");
-                    
+                    while (submenu3 != 5) {  
+                        cent3 = false;
+                        System.out.println("---------Carros----------");
+                        System.out.println("1. Crear");
+                        System.out.println("2. Modificar");
+                        System.out.println("3. Eliminar");
+                        System.out.println("4. Listar por su estado");
+                        System.out.println("5. Salir");
+                        System.out.println("Ingrese opcion del submenu: ");
+                        submenu3 = lea.nextInt();
+                        System.out.println("-------------------------");
+                        if (submenu3 == 1) {
+                            
+                            cent3 = true;
+                        }
+                        if (submenu3 == 2) {
+                            
+                            cent3 = true;
+                        }
+                        if (submenu3 == 3) {
+                            
+                            cent3 = true;
+                        }
+                        if (submenu3 == 4) {
+                            
+                            cent3 = true;
+                        }
+                        if (!cent3 && submenu3 != 5) {
+                            System.out.println("Ingrese opcion correcta del submenu");
+                        }
+                    }
                     cent = true;
                 }
-                if (!cent) {
+                if (!cent && menu !=4) {
                     System.out.println("Ingrese opcion valida del menu");
                 }
             }
