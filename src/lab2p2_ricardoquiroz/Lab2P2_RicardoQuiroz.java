@@ -67,11 +67,21 @@ static Scanner lea = new Scanner(System.in);
                             cent1 = true;
                         }
                         if (submenu1 == 2) {
+                            int indice;
                             
                             cent1 = true;
                         }
                         if (submenu1 == 3) {
-                            
+                            int indice;
+                            System.out.print("Ingrese indice del cliente a borrar: ");
+                            indice = lea.nextInt();
+                            if (indice <= lista.size()-1 && lista.get(indice) instanceof Cliente) {
+                                lista.remove(indice);
+                                System.out.println("Cliente eliminado");
+                            }
+                            else{
+                                System.out.println("No se cumplen los requisitos");
+                            }
                             cent1 = true;
                         }
                         if (submenu1 == 4) {
