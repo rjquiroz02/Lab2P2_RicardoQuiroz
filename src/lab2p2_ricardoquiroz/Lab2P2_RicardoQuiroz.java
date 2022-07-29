@@ -63,11 +63,13 @@ static Scanner lea = new Scanner(System.in);
                             i = lea.next();
                             System.out.print("Saldo a pagar: ");
                             p = lea.nextInt();
-                            lista.add(new Cliente(n, a, i, p));                           
+                            lista.add(new Cliente(n, a, i, p));           
+                            
                             cent1 = true;
                         }
                         if (submenu1 == 2) {
                             int indice;
+                            
                             
                             cent1 = true;
                         }
@@ -82,6 +84,7 @@ static Scanner lea = new Scanner(System.in);
                             else{
                                 System.out.println("No se cumplen los requisitos");
                             }
+                            
                             cent1 = true;
                         }
                         if (submenu1 == 4) {
@@ -92,9 +95,11 @@ static Scanner lea = new Scanner(System.in);
                                 }
                             }
                             System.out.println(out);
+                            
                             cent1 = true;
                         }
                         if (submenu1 == 5) {
+                            
                             
                             cent1 = true;
                         }
@@ -120,22 +125,49 @@ static Scanner lea = new Scanner(System.in);
                         submenu2 = lea.nextInt();
                         System.out.println("-----------------------------");
                         if (submenu2 == 1) {
+                            String nom;
+                            int e, s, r;
+                            String cond;
+                            boolean t;
+                            System.out.print("Nombre: ");
+                            lea.nextLine();
+                            nom = lea.nextLine();
+                            System.out.print("Edad: ");
+                            e = lea.nextInt();
+                            System.out.print("Sueldo: ");
+                            s = lea.nextInt();
+                            System.out.print("Numero RRHH: ");
+                            r = lea.nextInt();
+                            System.out.println("Esta trabajando[s/n]: ");
+                            cond = lea.next();
+                            if (cond.contains("s")) {
+                                t = true;
+                            }
+                            else{
+                                t = false;
+                            }
+                            lista.add(new Empleado(nom, e, s, r, t));
                             
                             cent2 = true;
                         }
                         if (submenu2 == 2) {
+                            int indice;
+                            
                             
                             cent2 = true;
                         }
                         if (submenu2 == 3) {
                             
+                            
                             cent2 = true;
                         }
                         if (submenu2 == 4) {
                             
+                            
                             cent2 = true;
                         }
                         if (submenu2 == 5) {
+                            
                             
                             cent2 = true;
                         }
@@ -161,17 +193,21 @@ static Scanner lea = new Scanner(System.in);
                         System.out.println("-------------------------");
                         if (submenu3 == 1) {
                             
+                            
                             cent3 = true;
                         }
                         if (submenu3 == 2) {
+                            
                             
                             cent3 = true;
                         }
                         if (submenu3 == 3) {
                             
+                            
                             cent3 = true;
                         }
                         if (submenu3 == 4) {
+                            
                             
                             cent3 = true;
                         }
