@@ -76,4 +76,4 @@ public class Empleado {
                 + "Nombre: "+nombre+" Edad: "+edad+" Sueldo: "+sueldo+" Numero RRHH: "+rrhh+" Esta trabajando: "+trabaja;
     }
     
-}
+}//public class
