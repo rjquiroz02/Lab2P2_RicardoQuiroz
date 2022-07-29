@@ -19,4 +19,7 @@ public class Carro {
     private String ref;
     private int costorep;
     
+    //constructores
+    
+    
 }

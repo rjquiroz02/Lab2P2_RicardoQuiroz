@@ -16,7 +16,10 @@ public class Cliente {
     private String identidad;
     private int pagorep;
     
-    //constructor
+    //constructores
+    public Cliente(){        
+    }
+    
     public Cliente(String name, int age, String identidad, int pagorep){
         this.name=name;
         this.age=age;
@@ -58,7 +61,7 @@ public class Cliente {
     }
     
     //metodo admin
-    public String toString(){
+    public String toStringCl(){
         return "El cliente es: \n"
                 + "Nombre: "+name+" Edad: "+age+" Identidad: "+identidad+" Saldo a pagar: "+pagorep;
     }
