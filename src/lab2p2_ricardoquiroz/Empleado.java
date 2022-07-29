@@ -10,6 +10,7 @@ package lab2p2_ricardoquiroz;
  * @author rjqer
  */
 public class Empleado {
+    //atributos
     private String nombre;
     private int edad;
     private boolean horario;

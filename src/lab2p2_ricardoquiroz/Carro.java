@@ -10,6 +10,7 @@ package lab2p2_ricardoquiroz;
  * @author rjqer
  */
 public class Carro {
+    //atributos
     private String marca;
     private String modelo;
     private int anofab;
