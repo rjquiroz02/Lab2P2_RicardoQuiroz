@@ -52,7 +52,18 @@ static Scanner lea = new Scanner(System.in);
                         submenu1 = lea.nextInt();
                         System.out.println("----------------------------");
                         if (submenu1 == 1) {
-                            
+                            String n, i;
+                            int a, p;
+                            System.out.print("Nombre: ");
+                            lea.nextLine();
+                            n = lea.nextLine();
+                            System.out.print("Edad: ");
+                            a = lea.nextInt();
+                            System.out.print("Identidad: ");
+                            i = lea.next();
+                            System.out.print("Saldo a pagar: ");
+                            p = lea.nextInt();
+                            lista.add(new Cliente(n, a, i, p));                           
                             cent1 = true;
                         }
                         if (submenu1 == 2) {
@@ -64,7 +75,13 @@ static Scanner lea = new Scanner(System.in);
                             cent1 = true;
                         }
                         if (submenu1 == 4) {
-                            
+                            String out = "";
+                            for (Object object : lista) {
+                                if (object instanceof Cliente) {
+                                    out+=lista.indexOf(object)+"-> "+((Cliente) object).toStringCl()+"\n";
+                                }
+                            }
+                            System.out.println(out);
                             cent1 = true;
                         }
                         if (submenu1 == 5) {
