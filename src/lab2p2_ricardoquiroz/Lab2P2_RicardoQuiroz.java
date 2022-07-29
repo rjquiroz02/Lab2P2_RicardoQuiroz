@@ -32,22 +32,73 @@ static Scanner lea = new Scanner(System.in);
                 System.out.println("1. Clientes");
                 System.out.println("2. Empleados");
                 System.out.println("3. Carros");
+                System.out.println("4. Salir");
                 System.out.println("Ingrese submenu que desea abrir: ");
                 menu = lea.nextInt();
                 System.out.println("----------------------------------");
                 if (menu == 1) {
-                    System.out.println("----------Clientes----------");
-                    System.out.println("");
-                    System.out.println("----------------------------");
+                    int submenu1 = 0;
+                    boolean cent1;
+                    while (submenu1 != 6) {
+                        System.out.println("----------Clientes----------");
+                        System.out.println("1. Crear");
+                        System.out.println("2. Modificar");
+                        System.out.println("3. Eliminar");
+                        System.out.println("4. Listar clientes en sistema");
+                        System.out.println("5. Listar carros por cliente");
+                        System.out.println("6. Salir");
+                        System.out.println("Ingrese opcion del submenu: ");
+                        submenu1 = lea.nextInt();
+                        System.out.println("----------------------------");
+                        if (submenu1 == 1) {
+                            
+                        }
+                        if (submenu1 == 2) {
+                            
+                        }
+                        if (submenu1 == 3) {
+                            
+                        }
+                        if (submenu1 == 4) {
+                            
+                        }
+                        if (submenu1 == 5) {
+                            
+                        }
+                    }                    
                     cent = true;
                 }
                 if (menu == 2) {
+                    int submenu2 = 0;
+                    boolean cent2;
+                    System.out.println("----------Empleados----------");
+                    System.out.println("1. Crear");
+                    System.out.println("2. Modificar");
+                    System.out.println("3. Eliminar");
+                    System.out.println("4. Listar");
+                    System.out.println("5. Marcar asistencia");
+                    System.out.println("6. Salir");
+                    System.out.println("Ingrese opcion del submenu: ");
+                    System.out.println("-----------------------------");
                     
                     cent = true;
                 }
                 if (menu == 3) {
+                    int submenu3 = 0;
+                    boolean cent3;
+                    System.out.println("---------Carros----------");
+                    System.out.println("1. Crear");
+                    System.out.println("2. Modificar");
+                    System.out.println("3. Eliminar");
+                    System.out.println("4. Listar por su estado");
+                    System.out.println("5. Salir");
+                    System.out.println("Ingrese opcion del submenu: ");
+                    System.out.println("-------------------------");
                     
                     cent = true;
+                }
+                if (!cent) {
+                    System.out.println("Ingrese opcion valida del menu");
                 }
             }
         }
