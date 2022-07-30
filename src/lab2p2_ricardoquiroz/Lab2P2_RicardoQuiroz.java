@@ -233,22 +233,22 @@ static Scanner lea = new Scanner(System.in);
                             String marca, modelo, fechaingreso, estado, ref;
                             int anofab, costorep;
                             System.out.print("Marca: ");
-                            lea.nextLine();
+                            lea = new Scanner(System.in);
                             marca = lea.nextLine();
                             System.out.print("Modelo: ");
-                            lea.nextLine();
+                            lea = new Scanner(System.in);
                             modelo = lea.nextLine();
                             System.out.print("Ano Fabricado: ");
                             anofab = lea.nextInt();
-                            System.out.println("Fecha ingreso: ");
+                            System.out.print("Fecha ingreso: ");
                             fechaingreso = lea.next();
-                            System.out.println("Estado: ");
-                            lea.nextLine();
+                            System.out.print("Estado: ");
+                            lea = new Scanner(System.in);
                             estado = lea.nextLine();
-                            System.out.println("Referencia Dueno: ");
-                            lea.nextLine();
+                            System.out.print("Referencia Dueno: ");
+                            lea = new Scanner(System.in);
                             ref = lea.nextLine();
-                            System.out.println("Costo Reparacion: ");
+                            System.out.print("Costo Reparacion: ");
                             costorep = lea.nextInt();
                             lista.add(new Carro(marca, modelo, anofab, fechaingreso, estado, ref, costorep));
                             
@@ -261,6 +261,7 @@ static Scanner lea = new Scanner(System.in);
                             indice = lea.nextInt();
                             if (indice <= lista.size()-1 && lista.get(indice) instanceof Carro) {
                                 System.out.println("Ingrese estado: ");
+                                lea = new Scanner(System.in);
                                 estado = lea.nextLine();
                                 ((Carro)lista.get(indice)).setEstado(estado);
                                 System.out.println("Carro modificado");
@@ -269,7 +270,13 @@ static Scanner lea = new Scanner(System.in);
                             cent3 = true;
                         }
                         if (submenu3 == 3) {
-                            
+                            String out = "";
+                            for (Object object : lista) {
+                                if (object instanceof Carro) {
+                                    out+=lista.indexOf(object)+"-> "+((Carro) object).toStringCa()+"\n";
+                                }
+                            }
+                            System.out.println(out);
                             
                             cent3 = true;
                         }
